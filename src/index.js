@@ -17,7 +17,7 @@ app.use("/search", searchRouter);
 
 app.use((req, res) => {
   res.status(404).render("errorPage", {
-    title: "مقارن | خطأ 404",
+    title: "مقارن | خطأ",
     status: 404,
     message: "الصفحة غير موجودة",
   });
@@ -27,7 +27,7 @@ app.use((err, req, res, next) => {
   console.error(err.stack);
 
   res.status(500).render("errorPage", {
-    title: `مقارن | خطأ 500`,
+    title: "مقارن | خطأ",
     status: 500,
     message: "خطأ داخلي في الخادم",
   });
